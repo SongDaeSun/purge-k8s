@@ -1,17 +1,17 @@
 # purge-k8s
 
 ## purge docker
-sudo apt-get purge -y docker-engine docker docker.io docker-ce docker-ce-cli docker-buildx-plugin docker-compose-plugin 
-sudo apt-get autoremove -y --purge docker-engine docker docker.io docker-ce docker-buildx-plugin docker-compose-plugin 
+sudo apt-get purge -y docker-engine docker docker.io docker-ce docker-ce-cli docker-buildx-plugin docker-compose-plugin  
+sudo apt-get autoremove -y --purge docker-engine docker docker.io docker-ce docker-buildx-plugin docker-compose-plugin  
 
-sudo rm -rf /var/lib/docker /etc/docker
-sudo rm /etc/apparmor.d/docker
-sudo groupdel docker
-sudo rm -rf /var/run/docker.sock
+sudo rm -rf /var/lib/docker /etc/docker  
+sudo rm /etc/apparmor.d/docker  
+sudo groupdel docker  
+sudo rm -rf /var/run/docker.sock  
 
-sudo rm -rf /usr/local/bin/docker-compose
-sudo rm -rf /etc/docker
-sudo rm -rf ~/.docker
+sudo rm -rf /usr/local/bin/docker-compose  
+sudo rm -rf /etc/docker  
+sudo rm -rf ~/.docker  
 
 ## purge containerd
 sudo systemctl stop docker  
